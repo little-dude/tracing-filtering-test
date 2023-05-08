@@ -1,0 +1,6 @@
+imports_layout = "Vertical"
+imports_granularity = "Item"
+reorder_imports = true
+group_imports = "StdExternalCrate"
+format_macro_bodies = true
+format_macro_matchers = true
