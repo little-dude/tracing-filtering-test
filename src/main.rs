@@ -111,7 +111,7 @@ where
     }
 
     fn enabled(&self, _metadata: &Metadata<'_>, ctx: Context<'_, S>) -> bool {
-        panic!("enabled");
+        eprintln!("ENABLED");
         if let Some(span_ref) = ctx.lookup_current() {
             span_ref.extensions().get::<SpanExtDisable>().is_none()
         } else {
@@ -120,7 +120,7 @@ where
     }
 
     fn on_new_span(&self, attrs: &Attributes<'_>, id: &Id, ctx: Context<'_, S>) {
-        panic!("on_new_span");
+        eprintln!("ON_NEW_SPAN CALLED");
         // Lookup up the parents spans, see if an ancestor has the
         // extension already. If so, add the extension for this span
         // too.
